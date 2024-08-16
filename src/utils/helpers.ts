@@ -33,6 +33,17 @@ export const checkIfStartOrEnd = (row: number, col: number) => {
   );
 };
 
-const createNewGrid = (grid: TGridType, row: number, col: number) => {
+export const createNewGrid = (grid: TGridType, row: number, col: number) => {
   const newGrid = grid.slice();
+  const newTile = {
+    ...newGrid[row][col],
+    isWall: !newGrid[row][col].isWall,
+  };
+
+  newGrid[row][col] = newTile;
+  return newGrid;
 };
+
+export function isEqual(a: TTileType, b: TTileType) {
+  return a.row === b.row && a.col === b.col;
+}

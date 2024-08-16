@@ -1,5 +1,10 @@
 export type TAlgorithmType = "DIJKSTRA" | "A_STAR" | "BFS" | "DFS";
+
 export type TMazeType = "NONE" | "BINARY_TREE" | "RECURSIVE_DIVISION";
+export interface IMazeSelectType {
+  name: string;
+  value: TMazeType;
+}
 
 export type TTileType = {
   row: number;
