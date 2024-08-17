@@ -1,4 +1,8 @@
 export type TAlgorithmType = "DIJKSTRA" | "A_STAR" | "BFS" | "DFS";
+export interface IAlgorithmSelectType {
+  name: string;
+  value: TAlgorithmType;
+}
 
 export type TMazeType = "NONE" | "BINARY_TREE" | "RECURSIVE_DIVISION";
 export interface IMazeSelectType {
@@ -21,3 +25,7 @@ export type TTileType = {
 export type TGridType = TTileType[][];
 
 export type TSpeedType = 2 | 1 | 0.5;
+export interface ISpeedSelectType {
+  name: string;
+  value: TSpeedType;
+}

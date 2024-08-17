@@ -1,4 +1,8 @@
-import { IMazeSelectType } from "./types";
+import {
+  IAlgorithmSelectType,
+  IMazeSelectType,
+  ISpeedSelectType,
+} from "./types";
 
 export const MAX_ROWS = 39;
 export const MAX_COLS = 49;
@@ -50,3 +54,18 @@ export const MAZES: IMazeSelectType[] = [
     value: "RECURSIVE_DIVISION",
   },
 ];
+
+export const PATHFINDING_ALGORITHMS: IAlgorithmSelectType[] = [
+  { name: "Dijkstra", value: "DIJKSTRA" },
+  { name: "A-Start", value: "A_STAR" },
+  { name: "Breadth-First Search", value: "BFS" },
+  { name: "Depth-First Search", value: "DFS" },
+];
+
+export const SPEEDS: ISpeedSelectType[] = [
+  { name: "Slow", value: 2 },
+  { name: "Medium", value: 1 },
+  { name: "Fast", value: 0.5 },
+];
+
+export const SLEEP_TIME = 8;
