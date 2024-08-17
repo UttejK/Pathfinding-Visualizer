@@ -1,3 +1,4 @@
+import { aStar } from "../lib/algorithms/pathfinding/astar";
 import { bfs } from "../lib/algorithms/pathfinding/bfs";
 import { dfs } from "../lib/algorithms/pathfinding/dfs";
 import { djikstra } from "../lib/algorithms/pathfinding/djikstra";
@@ -21,6 +22,8 @@ export function runPathfindingAlgorithm({
       return dfs(grid, startTile, endTile);
     case "DIJKSTRA":
       return djikstra(grid, startTile, endTile);
+    case "A_STAR":
+      return aStar(grid, startTile, endTile);
     default:
       return bfs(grid, startTile, endTile);
   }
