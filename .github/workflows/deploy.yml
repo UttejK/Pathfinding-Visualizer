@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "21" # Or the Node.js version you need
+          node-version: "20" # Or the Node.js version you need
 
       - name: Install dependencies
         run: npm install
@@ -36,7 +36,5 @@ jobs:
       - name: Update Repository Description with URL
         env:
           REPO_URL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-        run: |
-          gh repo edit --description "Deployed at $REPO_URL"
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh repo edit --description "Deployed at $REPO_URL"
