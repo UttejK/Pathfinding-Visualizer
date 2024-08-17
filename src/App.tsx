@@ -13,7 +13,7 @@ function App() {
       <PTileProvider>
         <PSpeedProvider>
           <div className="h-svh w-svw flex flex-col ">
-            <Nav />
+            <Nav isVisualizationRunningRef={isVisualizationRunningRef} />
             <Grid isVisualizationRunningRef={isVisualizationRunningRef} />
           </div>
         </PSpeedProvider>

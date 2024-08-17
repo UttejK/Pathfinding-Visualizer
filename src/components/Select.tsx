@@ -22,7 +22,7 @@ export function Select({
         name={label}
         id={label}
         disabled={isDisabled}
-        className="bg-gray-700 cursor-pointer hover:bg-gray-800 transition ease-in active:ring-0 border-0 p-2 min-w-[200px] sm:min-w-full"
+        className="bg-gray-700 rounded-md cursor-pointer hover:bg-gray-800 transition ease-in active:ring-0 border-0 p-2 min-w-[200px] sm:min-w-full"
         value={value}
         onChange={onChange}
       >

@@ -62,3 +62,26 @@ export function getRandInt(min: number, max: number) {
 
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+export function isInQueue(tile: TTileType, queue: TTileType[]) {
+  for (let i = 0; i < queue.length; i++) {
+    if (isEqual(tile, queue[i])) return true;
+  }
+  return false;
+}
+
+export function checkStack(tile: TTileType, stack: TTileType[]) {
+  for (let i = 0; i < stack.length; i++) {
+    if (isEqual(tile, stack[i])) return true;
+  }
+  return false;
+}
+
+export function dropFromQueue(tile: TTileType, queue: TTileType[]) {
+  for (let i = 0; i < queue.length; i++) {
+    if (isEqual(tile, queue[i])) {
+      queue.splice(i, 1);
+      break;
+    }
+  }
+}

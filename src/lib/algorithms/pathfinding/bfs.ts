@@ -1,6 +1,5 @@
 import { getUntraversedNeighbors } from "../../../utils/getUntraversedNeighbors";
-import { isEqual } from "../../../utils/helpers";
-import { isInQueue } from "../../../utils/isInQueue";
+import { isEqual, isInQueue } from "../../../utils/helpers";
 import { TGridType, TTileType } from "../../../utils/types";
 
 export function bfs(grid: TGridType, startTile: TTileType, endTile: TTileType) {
